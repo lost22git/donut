@@ -3,7 +3,7 @@ import std/[os, math, sequtils]
 const chars = ".,-~:;=!*#$@"
 const (theta_spacing, phi_spacing) = (0.07'd, 0.02'd)
 const (r1, r2, k2) = (1'd, 2'd, 5'd)
-const (columns, lines) = (60, 25)
+const (columns, lines) = (70, 30)
 const k1 = columns.toFloat() * k2 * 3'd / (20'd * (r1 + r2))
 
 #!fmt: off
@@ -57,6 +57,6 @@ proc main() =
     render_donut(a, b)
     a += 0.07'd
     b += 0.03'd
-    sleep(24) # 90 FPS
+    sleep(24)
 
 main()
